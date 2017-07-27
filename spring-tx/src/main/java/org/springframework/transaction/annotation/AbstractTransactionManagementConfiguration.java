@@ -67,7 +67,7 @@ public abstract class AbstractTransactionManagementConfiguration implements Impo
 			return;
 		}
 		if (configurers.size() > 1) {
-			throw new IllegalStateException("Only one TransactionManagementConfigurer may exist");
+			throw new IllegalStateException("Only one TransactionManagementConfigurer can exist");
 		}
 		TransactionManagementConfigurer configurer = configurers.iterator().next();
 		this.txManager = configurer.annotationDrivenTransactionManager();
